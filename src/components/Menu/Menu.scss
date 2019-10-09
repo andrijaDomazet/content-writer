@@ -1,0 +1,61 @@
+.menu {
+  position: absolute;
+  display: flex;
+  left: 96%;
+  top: 25%;
+
+  .menuButton {
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    background: white;
+    border-right: none;
+    .menu-button {
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      clip-path: polygon(100% 50%, 0 0, 0 100%);
+      background: rgba(97, 11, 83, 0.8);
+      cursor: pointer;
+      margin: 5px;
+    }
+  }
+  .links {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border: 1px solid white;
+    background: rgba(0, 0, 0, 0.082);
+    width: 350px;
+
+    .link-div {
+      border: 0.1px solid white;
+      width: 100%;
+      margin: 15px 25px;
+      height: 25px;
+
+      a {
+        position: absolute;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 2.5em;
+        margin-top: -20px;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+.menu.open {
+  left: 70%;
+  animation: openMenu 0.5s linear;
+}
+
+@keyframes openMenu {
+  from {
+    left: 96%;
+  }
+  to {
+    left: 70%;
+  }
+}
