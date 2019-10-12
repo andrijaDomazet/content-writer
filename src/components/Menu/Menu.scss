@@ -1,17 +1,16 @@
 .menu {
-  position: absolute;
+  position: fixed;
   display: flex;
-  left: 96%;
-  top: 25%;
+  right: -320px;
+  top: 15vh;
 
   .menuButton {
     width: 50px;
     height: 50px;
-    border: 1px solid white;
     background: white;
     border-right: none;
+
     .menu-button {
-      position: absolute;
       width: 40px;
       height: 40px;
       clip-path: polygon(100% 50%, 0 0, 0 100%);
@@ -25,8 +24,9 @@
     flex-direction: column;
     text-align: left;
     border: 1px solid white;
+    border-right: none;
     background: rgba(0, 0, 0, 0.082);
-    width: 350px;
+    width: 320px;
 
     .link-div {
       border: 0.1px solid white;
@@ -47,15 +47,15 @@
   }
 }
 .menu.open {
-  left: 70%;
+  right: 0px;
   animation: openMenu 0.5s linear;
 }
 
 @keyframes openMenu {
   from {
-    left: 96%;
+    right: -350px;
   }
   to {
-    left: 70%;
+    right: 0px;
   }
 }
