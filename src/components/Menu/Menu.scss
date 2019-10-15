@@ -1,46 +1,56 @@
 .menu {
   position: fixed;
   display: flex;
-  right: -320px;
-  top: 15vh;
+  right: -200px;
+  // top: 15vh;
+  animation: closeMenu 1s ease-out;
 
   .menuButton {
-    width: 50px;
-    height: 50px;
-    background: white;
+    margin-top: 15vh;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.95);
     border-right: none;
+    cursor: pointer;
 
     .menu-button {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
       clip-path: polygon(100% 50%, 0 0, 0 100%);
       background: rgba(97, 11, 83, 0.8);
-      cursor: pointer;
       margin: 5px;
     }
+  }
+  .menuBackground {
+    // position: absolute;
+    top: -15vh;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.95);
   }
   .links {
     display: flex;
     flex-direction: column;
     text-align: left;
-    border: 1px solid white;
-    border-right: none;
-    background: rgba(0, 0, 0, 0.082);
-    width: 320px;
+    // border: 1px solid white;
+    // border-right: none;
+    // background: rgba(0, 0, 0, 0.082);
+    margin-top: 15vh;
+    width: 200px;
 
     .link-div {
-      border: 0.1px solid white;
+      // border: 0.1px solid white;
       width: 100%;
-      margin: 15px 25px;
+      margin: 15px 15px;
       height: 25px;
 
       a {
         position: absolute;
         color: white;
+        color: rgba(97, 11, 83, 0.8);
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 2.5em;
-        margin-top: -20px;
+        font-size: 1em;
+        margin-top: -10px;
         margin-left: 15px;
       }
     }
@@ -53,9 +63,17 @@
 
 @keyframes openMenu {
   from {
-    right: -350px;
+    right: -200px;
   }
   to {
     right: 0px;
+  }
+}
+@keyframes closeMenu {
+  from {
+    right: 0px;
+  }
+  to {
+    right: -200px;
   }
 }

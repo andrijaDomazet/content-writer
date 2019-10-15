@@ -20,14 +20,16 @@ export default class Menu extends Component {
         <div className="menuButton">
           <div className="menu-button" />
         </div>
-        <div className="links">
-          {menuOptions.map((option, index) => {
-            return (
-              <div className="link-div" key={index}>
-                <Link to={option.route}>{option.title}</Link>
-              </div>
-            );
-          })}
+        <div className="menuBackground">
+          <div className="links">
+            {menuOptions.map((option, index) => {
+              return (
+                <div className="link-div" key={index}>
+                  <Link to={option.route}>{option.title}</Link>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
     );
