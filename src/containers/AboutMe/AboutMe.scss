@@ -40,3 +40,18 @@
     }
   }
 }
+@media screen and(min-width:768px) {
+  .picture {
+    margin-left: 15px;
+    margin-top: 20px;
+    width: 150px !important;
+    height: 150px !important;
+    img {
+      width: 150px !important;
+      height: 150px !important;
+    }
+  }
+  .details {
+    margin: 10px 50px !important;
+  }
+}

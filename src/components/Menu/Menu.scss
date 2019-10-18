@@ -1,8 +1,7 @@
 .menu {
   position: fixed;
   display: flex;
-  right: -200px;
-  // top: 15vh;
+  right: -150px;
   animation: closeMenu 1s ease-out;
 
   .menuButton {
@@ -22,7 +21,6 @@
     }
   }
   .menuBackground {
-    // position: absolute;
     top: -15vh;
     height: 100vh;
     background: rgba(255, 255, 255, 0.95);
@@ -31,14 +29,10 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    // border: 1px solid white;
-    // border-right: none;
-    // background: rgba(0, 0, 0, 0.082);
     margin-top: 15vh;
-    width: 200px;
+    width: 150px;
 
     .link-div {
-      // border: 0.1px solid white;
       width: 100%;
       margin: 15px 15px;
       height: 25px;
@@ -63,7 +57,7 @@
 
 @keyframes openMenu {
   from {
-    right: -200px;
+    right: -150px;
   }
   to {
     right: 0px;
@@ -74,6 +68,41 @@
     right: 0px;
   }
   to {
-    right: -200px;
+    right: -150px;
+  }
+}
+
+@media screen and(min-width:768px) {
+  .menu {
+    right: -300px;
+    .links {
+      width: 300px;
+      .link-div {
+        margin: 15px 15px;
+        height: 25px;
+        border: 1px solid rgba(97, 11, 83, 0.8);
+        a {
+          font-size: 2.8em !important;
+          margin-top: -25px !important;
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  @keyframes openMenu {
+    from {
+      right: -300px;
+    }
+    to {
+      right: 0px;
+    }
+  }
+  @keyframes closeMenu {
+    from {
+      right: 0px;
+    }
+    to {
+      right: -300px;
+    }
   }
 }
