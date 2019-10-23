@@ -2,7 +2,7 @@
   position: fixed;
   display: flex;
   right: -150px;
-  animation: closeMenu 1s ease-out;
+  transition: transform 0.4s ease-in;
 
   .menuButton {
     margin-top: 15vh;
@@ -43,7 +43,7 @@
         color: rgba(97, 11, 83, 0.8);
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 1em;
+        font-size: 1.2em;
         margin-top: -10px;
         margin-left: 15px;
       }
@@ -51,25 +51,7 @@
   }
 }
 .menu.open {
-  right: 0px;
-  animation: openMenu 0.5s linear;
-}
-
-@keyframes openMenu {
-  from {
-    right: -150px;
-  }
-  to {
-    right: 0px;
-  }
-}
-@keyframes closeMenu {
-  from {
-    right: 0px;
-  }
-  to {
-    right: -150px;
-  }
+  transform: translateX(-150px);
 }
 
 @media screen and(min-width:768px) {
@@ -82,27 +64,14 @@
         height: 25px;
         border: 1px solid rgba(97, 11, 83, 0.8);
         a {
-          font-size: 2.8em !important;
-          margin-top: -25px !important;
+          font-size: 2.6em;
+          margin-top: -24px;
           margin-left: 15px;
         }
       }
     }
   }
-  @keyframes openMenu {
-    from {
-      right: -300px;
-    }
-    to {
-      right: 0px;
-    }
-  }
-  @keyframes closeMenu {
-    from {
-      right: 0px;
-    }
-    to {
-      right: -300px;
-    }
+  .menu.open {
+    transform: translateX(-300px);
   }
 }
