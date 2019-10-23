@@ -4,14 +4,13 @@ import "./Menu.scss";
 
 export default class Menu extends Component {
   state = {
-    open: true
+    open: false
   };
   getOpenMenu = () => {
     this.setState({ open: !this.state.open });
-    console.log("idemoo");
   };
   setOpenMenu = () => {
-    let style = this.state.open ? "menu" : "menu open";
+    let style = this.state.open ? "menu open" : "menu";
     return style;
   };
   render() {
