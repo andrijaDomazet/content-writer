@@ -2,17 +2,18 @@
   position: fixed;
   display: flex;
   right: -150px;
-  transition: transform 0.4s ease-in;
+  transition: transform 0.6s ease-in;
+  z-index: 999;
 
-  .menuButton {
+  .menu__button {
     margin-top: 15vh;
     width: 40px;
     height: 40px;
     background: rgba(255, 255, 255, 0.95);
     border-right: none;
+    outline: none;
     cursor: pointer;
-
-    .menu-button {
+    div {
       width: 30px;
       height: 30px;
       clip-path: polygon(100% 50%, 0 0, 0 100%);
