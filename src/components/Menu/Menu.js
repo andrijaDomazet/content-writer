@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./Menu.scss";
+// import Backdrop from "../Backdrop/Backdrop";
 
 export default class Menu extends Component {
   state = {
@@ -9,14 +10,14 @@ export default class Menu extends Component {
   getOpenMenu = () => {
     this.setState({ open: !this.state.open });
   };
-  setOpenMenu = () => {
-    let style = this.state.open ? "menu open" : "menu";
-    return style;
+  setClassMenu = () => {
+    return this.props.show ? "menu open" : "menu";
   };
+
   render() {
     return (
-      <div className={this.setOpenMenu()} onClick={this.getOpenMenu}>
-        <div className="menuButton">
+      <div className={this.setClassMenu()} onClick={this.props.clicked}>
+        <div className="menu__button">
           <div className="menu-button" />
         </div>
         <div className="menuBackground">

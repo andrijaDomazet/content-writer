@@ -8,11 +8,10 @@ import Portfolio from "./containers/Portfolio/Portfolio";
 import News from "./containers/News/News";
 import Contact from "./containers/Contact/Contact";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <Router>
-        <Menu />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/aboutMe/" component={AboutMe} />
@@ -24,5 +23,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
